@@ -1,4 +1,4 @@
-name: destroy my terraform resources
+name: deploy my terraform resources
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  destroy:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -33,5 +33,5 @@ jobs:
       - name: Terraform Plan
         run: terraform plan
 
-      - name: Terraform Destroy
-        run: terraform destroy -auto-approve
+      - name: Terraform Apply
+        run: terraform apply -auto-approve
