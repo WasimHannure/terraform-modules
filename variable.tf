@@ -1,6 +1,6 @@
 variable "class_bucket_name" {
   description = "The name of the S3 bucket to create"
-  default     = "class-module-bucket1112"
+  default     = "class-terraform-bucket1112"
 }
 
 variable "ami_id" {
