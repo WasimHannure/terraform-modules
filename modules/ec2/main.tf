@@ -4,6 +4,6 @@ resource "aws_instance" "myinstance" {
   key_name      = var.key_name
 
   tags = {
-    Name = "terraform-instance"
+    Name = "githubActions-instance"
   }
 }
