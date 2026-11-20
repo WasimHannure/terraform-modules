@@ -5,8 +5,14 @@ on:
     branches:
       - main
 
+  push:
+    branches:
+      - main
+
 jobs:
-  deploy:
+  deploy-plan:
+    name: Terraform Plan
+    if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -32,6 +38,3 @@ jobs:
 
       - name: Terraform Plan
         run: terraform plan
-
-      - name: Terraform Apply
-        run: terraform apply -auto-approve
