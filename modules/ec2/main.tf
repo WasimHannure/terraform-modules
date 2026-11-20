@@ -4,6 +4,6 @@ resource "aws_instance" "myinstance" {
   key_name      = var.key_name
 
   tags = {
-    Name = "githubActions-instance"
+    Name = "githubActions-ec2-instance"
   }
 }
